@@ -7,10 +7,10 @@ using namespace std;
 
 Referee::Referee() {this->result = '?';};
 
-char Referee::refGame(Human player1, Computer player2) {
+char Referee::refGame(Computer Randy, Computer Cassie) {
 
-    player1.makeMove();
-    player2.makeMove();
+    Randy.makeMove();
+    Cassie.makeMove();
 
     if (player1.move == player2.move){
         this->result = 'T';

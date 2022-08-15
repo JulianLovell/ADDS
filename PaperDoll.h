@@ -1,10 +1,14 @@
 using namespace std;
 
-class PaperDoll{
-    public:
-    char move;
+#include "Computer.h"
+
+class PaperDoll: public Computer {
+    private:
+    int counter;
 
     public:
     PaperDoll();
-    char makeMove();
+    virtual void makeMove();
+    void setCounter(int a);
+    int getCounter();
 };

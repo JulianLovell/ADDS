@@ -9,3 +9,5 @@ char Computer::getMove() {
 return this->move;
 
 }
+
+void Computer::setMove(char a) { this->move = a; }

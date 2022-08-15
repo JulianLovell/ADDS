@@ -2,27 +2,25 @@ using namespace std;
 
 #include "Crescendo.h"
 
+Crescendo::Crescendo() { setMove('I'); setCounter(0); }
 
-Crescendo::Crescendo() { this->move = '?';};
-
-char Crescendo::makeMove() {
-
-for(int i = 0; i < 2; i++){
-    if (i == 0){
-        this->move = 'P';
-        return this->move;
+void Crescendo::makeMove() {
+    if (this->counter == 0){
+        setMove('P');
     };
 
-    if (i == 1){
-        this->move = 'S';
-        return this->move;
+    if (this->counter == 1){
+        setMove('S');
     };
 
-    if (i == 2){
-        this->move = 'R';
-        return this->move;
+    if (this->counter == 2){
+        setMove('R');
     };
+
+    this->counter = (counter +1) % 3;
 };
-return '?';
-};
+
+void Crescendo::setCounter(int a) {this->counter = a;}
+
+int Crescendo::getCounter() {return this->counter;}
 

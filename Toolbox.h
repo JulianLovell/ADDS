@@ -10,6 +10,4 @@ class Toolbox : public Computer {
 
 };
 
-
-
 #endif

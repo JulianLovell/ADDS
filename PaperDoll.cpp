@@ -2,22 +2,25 @@ using namespace std;
 
 #include "PaperDoll.h"
 
+PaperDoll::PaperDoll() { setMove('I'); setCounter(0); }
 
-PaperDoll::PaperDoll() { this->move = '?';};
+void PaperDoll::makeMove() {
+    if (this->counter == 0){
+        setMove('P');
+    };
 
-char PaperDoll::makeMove() {    
+    if (this->counter == 1){
+        setMove('S');
+    };
 
-for(int i = 0; i < 2; i++){
-    if (i == 0){
-        this->move = 'P';
-    }
+    if (this->counter == 2){
+        setMove('S');
+    };
 
-    else if (i == 1){
-        this->move = 'S';
-    }
-
-    else if (i == 2){
-        this->move = 'S';
-    }
-    return this->move;}
+    this->counter = (counter +1) % 3;
 };
+
+void PaperDoll::setCounter(int a) {this->counter = a;}
+
+int PaperDoll::getCounter() {return this->counter;}
+

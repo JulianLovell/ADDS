@@ -2,22 +2,25 @@ using namespace std;
 
 #include "FistfullODollars.h"
 
+FistfullODollars::FistfullODollars() { setMove('I'); setCounter(0); }
 
-FistfullODollars::FistfullODollars() { this->move = '?';};
+void FistfullODollars::makeMove() {
+    if (this->counter == 0){
+        setMove('R');
+    };
 
-char FistfullODollars::makeMove() {
+    if (this->counter == 1){
+        setMove('P');
+    };
 
-for(int i = 0; i < 2; i++){
-    if (i == 0){
-        this->move = 'R';
-    }
+    if (this->counter == 2){
+        setMove('P');
+    };
 
-    else if (i == 1){
-        this->move = 'P';
-    }
-
-    else if (i == 2){
-        this->move = 'P';
-    }
-    return this->move;}
+    this->counter = (counter +1) % 3;
 };
+
+void FistfullODollars::setCounter(int a) {this->counter = a;}
+
+int FistfullODollars::getCounter() {return this->counter;}
+
