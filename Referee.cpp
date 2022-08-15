@@ -2,6 +2,7 @@ using namespace std;
 
 #include "Human.h"
 #include "Computer.h"
+#include "RandomComputer.h"
 #include "Referee.h"
 
 Referee::Referee() {this->result = '?';};

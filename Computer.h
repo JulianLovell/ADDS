@@ -1,10 +1,15 @@
-using namespace std;
+#ifndef _Computer
+#define _Computer
 
 class Computer{
+    private:
+        char move;
+    
     public:
-    char move;
+        Computer();
+        virtual void makeMove();
+        virtual char getMove();
+        virtual void setMove(char a);
 
-    public:
-    Computer();
-    char makeMove();
 };
+#endif

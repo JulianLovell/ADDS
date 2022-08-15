@@ -1,13 +1,11 @@
-using namespace std;
-
 #include "Computer.h"
 
+Computer::Computer() { this->move = 'I'; }
 
-Computer::Computer() { this->move = '?';};
+void Computer::makeMove() { setMove('T'); }
 
-char Computer::makeMove() {
-
-this->move = 'R';
+char Computer::getMove() {
 
 return this->move;
-};
+
+}
