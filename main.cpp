@@ -7,7 +7,7 @@ using namespace std;
 
 int main(){
     Reverse a;
-    cout << a.reverseDigit(8106) << endl;
+    cout << a.reverseDigit(123) << endl;
     cout << a.reverseString("Barlie") << endl;
 
     Truckloads b;

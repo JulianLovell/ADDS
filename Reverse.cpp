@@ -18,7 +18,7 @@ int Reverse::reverseDigit(int value){
         return value;
     };
 
-    return pow(10 , (floor(log10(value) + 1) - 1)*(value % 10) + reverseDigit(value / 10));
+    return pow(10 , (floor(log10(value) + 1)) - 1)*(value % 10) + reverseDigit(value / 10);
 };
 
 string Reverse::reverseString(string letters){
