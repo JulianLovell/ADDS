@@ -45,3 +45,5 @@ int main() {
     cout<<minValue<<" "<<gcdValue<<endl;
 
     return 0;
+
+}
