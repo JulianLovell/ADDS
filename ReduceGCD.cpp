@@ -3,12 +3,10 @@
 ReduceGCD::ReduceGCD() : ReduceGeneric() {}
 
 int ReduceGCD::binaryOperator(int x, int y) {
-    while (y != 0) {
-        int remainder = x%y;
-        x = y;
-        y = remainder;
-    }
-    return x;
-}
 
-ReduceGCD::~ReduceGCD() {}
+    if(y == 0) {
+        return x;
+    }
+
+    return binaryOperator(y, x % y);
+}
