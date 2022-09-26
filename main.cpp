@@ -27,7 +27,7 @@ int main() {
 
     One = execute(One, BitFlipPtr, k1);
 
-    Two = execute(Two, BitFlipPtr, k2);
+    Two = execute(Two, RearrangePtr, k2);
 
     cout << One->getString() << " " << Two->getString() << " " << Two->getMaxOnes() << endl;
 
