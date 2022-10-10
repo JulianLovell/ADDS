@@ -13,13 +13,9 @@ vector<int> append(vector<int> list1, vector<int> list2) {
 }
 
 vector<int> QuickSort::sort(vector<int> list) {
-    // Base Case
-
     if (list.size() <= 1) {
         return list;
     }
-
-    // Recursion
 
     vector<int> less, more;
 
@@ -46,9 +42,7 @@ vector<int> QuickSort::sort(vector<int> list) {
     }
 
     less = sort(less);
-
     less.push_back(pivot);
-
     more = sort(more);
 
     return append(less, more);
