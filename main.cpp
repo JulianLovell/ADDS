@@ -14,11 +14,21 @@ void printVector(vector<int> list) {
 }
 
 int main() {
-    vector<int> sort{1, 7, 8, 4, 5, 6, 2, 3, 9, 3};
-    QuickSort testBS;
-    testBS.sort(sort);
 
+    int input;
+    vector<int> list;
 
+    while(cin >> input) {
+        list.push_back(input);
+    }
+
+    QuickSort runQS;
+    RecursiveBinarySearch runRBS;
+
+    list = runQS.sort(list);
+
+    cout << boolalpha << runRBS.search(list, 1) << " ";
+    printVector(list);
 
     return 0;
 }
